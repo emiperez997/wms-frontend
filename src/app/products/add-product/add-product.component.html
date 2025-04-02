@@ -1,0 +1,28 @@
+<h3>Add Product</h3>
+
+<div class="row">
+  <form class="col s12" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="name" id="name" type="text" />
+        <label for="name">Name</label>
+      </div>
+      <div class="input-field col s12">
+        <input formControlName="description" id="description" type="text" />
+        <label for="description">Description</label>
+      </div>
+      <div class="input-field col s6">
+        <input formControlName="price" id="price" type="number" />
+        <label for="price">Price</label>
+      </div>
+      <div class="input-field col s6">
+        <input formControlName="stock" id="stock" type="number" />
+        <label for="stock">Stock</label>
+      </div>
+    </div>
+
+    <button class="waves-effect light-blue darken-3 btn" type="submit">
+      Add
+    </button>
+  </form>
+</div>
