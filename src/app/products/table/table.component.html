@@ -7,6 +7,9 @@
       <th>Name</th>
       <th>Description</th>
       <th>Price</th>
+      <th>Stock</th>
+      <th>Location</th>
+      <th>Code</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -17,6 +20,8 @@
       <td>{{ product.description }}</td>
       <td>{{ product.price | currency }}</td>
       <td>{{ product.stock }}</td>
+      <td>{{ product.location }}</td>
+      <td>{{ product.code }}</td>
       <td>
         <button
           class="btn-floating btn-small waves-effect waves-light red"

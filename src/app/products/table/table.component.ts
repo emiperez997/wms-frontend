@@ -15,7 +15,7 @@ export class TableComponent {
     return this.productService.getProducts();
   }
 
-  deleteProduct(id: number) {
+  deleteProduct(id: string) {
     this.productService.deleteProduct(id);
   }
 }

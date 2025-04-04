@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../interfaces/Product';
+import { v4 as uuid } from 'uuid';
 
 @Injectable({
   providedIn: 'root'
@@ -8,25 +9,31 @@ export class ProductsService {
 
   private products: Product[] = [
     {
-      id: 1,
+      id: uuid(),
       name: 'Product 1',
       description: 'Description 1',
       price: 10,
-      stock: 100
+      stock: 100,
+      location: 'Location 1',
+      code: 'ABC123'
     },
     {
-      id: 2,
+      id: uuid(),
       name: 'Product 2',
       description: 'Description 2',
       price: 20,
-      stock: 200
+      stock: 200,
+      location: 'Location 1',
+      code: 'DEF456',
     },
     {
-      id: 3,
+      id: uuid(),
       name: 'Product 3',
       description: 'Description 3',
       price: 30,
-      stock: 300
+      stock: 300,
+      location: 'Location 2',
+      code: 'GHI789',
     }
   ];
 
@@ -37,11 +44,11 @@ export class ProductsService {
   }
 
   addProduct(product: Product): void {
-    product.id = this.products[this.products.length - 1].id + 1;
+    product.id = uuid();;
     this.products.push(product);
   }
 
-  deleteProduct(id: number): void {
+  deleteProduct(id: string): void {
     this.products = this.products.filter(product => product.id !== id);
   }
 }
